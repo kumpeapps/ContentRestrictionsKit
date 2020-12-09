@@ -9,7 +9,7 @@ import XCTest
 import ContentRestrictionsKit
 
 class Tests: XCTestCase {
-    
+
     override func setUpWithError() throws {
         // Set simulator rating to 400 (R)
         UserDefaults.standard.set(400, forKey: "com.apple.content-rating.MovieRating")
