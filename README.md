@@ -52,6 +52,7 @@ pod 'ContentRestrictionKit'
 -   [ ] Explicit Books Allowed
 -   [ ] Explicit Music Podcasts Allowed
 
-## Currently Supported Countries (feel free to send me info on new countries or contribute via pull request)
+## Currently Supported Countries 
+(feel free to send me info on new countries or contribute via pull request)
 
 -   [X] United States (US)
