@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0F20063B258051E400D9E4BE /* ContentRestrictionsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F200631258051E400D9E4BE /* ContentRestrictionsKit.framework */; };
-		0F200640258051E400D9E4BE /* ContentRestrictionsKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20063F258051E400D9E4BE /* ContentRestrictionsKitTests.swift */; };
-		0F200642258051E400D9E4BE /* ContentRestrictionsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F200634258051E400D9E4BE /* ContentRestrictionsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F200652258052A400D9E4BE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F200651258052A400D9E4BE /* Movie.swift */; };
+		0F200656258052E900D9E4BE /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F200655258052E900D9E4BE /* Tests.swift */; };
+		0F20065C258066E100D9E4BE /* Movie+US.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20065B258066E100D9E4BE /* Movie+US.swift */; };
+		0F2006622580683100D9E4BE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006612580683100D9E4BE /* Country.swift */; };
+		0F20066F25806CBC00D9E4BE /* ContentRestrictionsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20066E25806CBC00D9E4BE /* ContentRestrictionsKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +27,14 @@
 
 /* Begin PBXFileReference section */
 		0F200631258051E400D9E4BE /* ContentRestrictionsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ContentRestrictionsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F200634258051E400D9E4BE /* ContentRestrictionsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentRestrictionsKit.h; sourceTree = "<group>"; };
 		0F200635258051E400D9E4BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F20063A258051E400D9E4BE /* ContentRestrictionsKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentRestrictionsKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F20063F258051E400D9E4BE /* ContentRestrictionsKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRestrictionsKitTests.swift; sourceTree = "<group>"; };
 		0F200641258051E400D9E4BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F200651258052A400D9E4BE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0F200655258052E900D9E4BE /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		0F20065B258066E100D9E4BE /* Movie+US.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+US.swift"; sourceTree = "<group>"; };
+		0F2006612580683100D9E4BE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		0F20066E25806CBC00D9E4BE /* ContentRestrictionsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRestrictionsKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +77,11 @@
 		0F200633258051E400D9E4BE /* ContentRestrictionsKit */ = {
 			isa = PBXGroup;
 			children = (
-				0F200634258051E400D9E4BE /* ContentRestrictionsKit.h */,
+				0F2006672580683E00D9E4BE /* Enums */,
 				0F200635258051E400D9E4BE /* Info.plist */,
+				0F200651258052A400D9E4BE /* Movie.swift */,
+				0F20065B258066E100D9E4BE /* Movie+US.swift */,
+				0F20066E25806CBC00D9E4BE /* ContentRestrictionsKit.swift */,
 			);
 			path = ContentRestrictionsKit;
 			sourceTree = "<group>";
@@ -80,10 +89,18 @@
 		0F20063E258051E400D9E4BE /* ContentRestrictionsKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				0F20063F258051E400D9E4BE /* ContentRestrictionsKitTests.swift */,
 				0F200641258051E400D9E4BE /* Info.plist */,
+				0F200655258052E900D9E4BE /* Tests.swift */,
 			);
 			path = ContentRestrictionsKitTests;
+			sourceTree = "<group>";
+		};
+		0F2006672580683E00D9E4BE /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0F2006612580683100D9E4BE /* Country.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +110,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F200642258051E400D9E4BE /* ContentRestrictionsKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +163,11 @@
 				TargetAttributes = {
 					0F200630258051E400D9E4BE = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					0F200639258051E400D9E4BE = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -194,6 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2006622580683100D9E4BE /* Country.swift in Sources */,
+				0F20065C258066E100D9E4BE /* Movie+US.swift in Sources */,
+				0F200652258052A400D9E4BE /* Movie.swift in Sources */,
+				0F20066F25806CBC00D9E4BE /* ContentRestrictionsKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F200640258051E400D9E4BE /* ContentRestrictionsKitTests.swift in Sources */,
+				0F200656258052E900D9E4BE /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +363,9 @@
 		0F200646258051E400D9E4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -354,9 +378,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kumpeapps.ios.ContentRestrictionsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +391,9 @@
 		0F200647258051E400D9E4BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -378,6 +406,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kumpeapps.ios.ContentRestrictionsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -389,6 +418,8 @@
 		0F200649258051E400D9E4BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				INFOPLIST_FILE = ContentRestrictionsKitTests/Info.plist;
@@ -399,6 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kumpeapps.ios.ContentRestrictionsKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -407,6 +439,8 @@
 		0F20064A258051E400D9E4BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				INFOPLIST_FILE = ContentRestrictionsKitTests/Info.plist;
