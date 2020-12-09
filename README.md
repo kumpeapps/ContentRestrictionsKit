@@ -1,5 +1,6 @@
 # ContentRestrictionKit
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/efa8e1aa551f480fa451f59c12b8a279)](https://app.codacy.com/gh/kumpeapps/ContentRestrictionsKit?utm_source=github.com&utm_medium=referral&utm_content=kumpeapps/ContentRestrictionsKit&utm_campaign=Badge_Grade_Settings)
 [![Version](https://img.shields.io/cocoapods/v/ContentRestrictionKit.svg?style=flat)](https://cocoapods.org/pods/ContentRestrictionKit)
 [![Platform](https://img.shields.io/cocoapods/p/ContentRestrictionKit.svg?style=flat)](https://cocoapods.org/pods/ContentRestrictionKit)
 
