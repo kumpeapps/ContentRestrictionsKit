@@ -13,6 +13,9 @@
 		0F20065C258066E100D9E4BE /* Movie+US.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20065B258066E100D9E4BE /* Movie+US.swift */; };
 		0F2006622580683100D9E4BE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006612580683100D9E4BE /* Country.swift */; };
 		0F20066F25806CBC00D9E4BE /* ContentRestrictionsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20066E25806CBC00D9E4BE /* ContentRestrictionsKit.swift */; };
+		0F2006D82581BF5B00D9E4BE /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006D72581BF5B00D9E4BE /* TVShow.swift */; };
+		0F2006E12581BFD900D9E4BE /* Explicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006E02581BFD900D9E4BE /* Explicit.swift */; };
+		0F2006EB2585848400D9E4BE /* TVShow+US.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006EA2585848400D9E4BE /* TVShow+US.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		0F20065B258066E100D9E4BE /* Movie+US.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+US.swift"; sourceTree = "<group>"; };
 		0F2006612580683100D9E4BE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		0F20066E25806CBC00D9E4BE /* ContentRestrictionsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRestrictionsKit.swift; sourceTree = "<group>"; };
+		0F2006D72581BF5B00D9E4BE /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		0F2006E02581BFD900D9E4BE /* Explicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explicit.swift; sourceTree = "<group>"; };
+		0F2006EA2585848400D9E4BE /* TVShow+US.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShow+US.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +83,11 @@
 		0F200633258051E400D9E4BE /* ContentRestrictionsKit */ = {
 			isa = PBXGroup;
 			children = (
+				0F2006DF2581BFB400D9E4BE /* Explicit */,
+				0F2006D62581BF4E00D9E4BE /* TVShow */,
+				0F2006D52581BEE700D9E4BE /* Movie */,
 				0F2006672580683E00D9E4BE /* Enums */,
 				0F200635258051E400D9E4BE /* Info.plist */,
-				0F200651258052A400D9E4BE /* Movie.swift */,
-				0F20065B258066E100D9E4BE /* Movie+US.swift */,
 				0F20066E25806CBC00D9E4BE /* ContentRestrictionsKit.swift */,
 			);
 			path = ContentRestrictionsKit;
@@ -101,6 +108,32 @@
 				0F2006612580683100D9E4BE /* Country.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		0F2006D52581BEE700D9E4BE /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				0F200651258052A400D9E4BE /* Movie.swift */,
+				0F20065B258066E100D9E4BE /* Movie+US.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		0F2006D62581BF4E00D9E4BE /* TVShow */ = {
+			isa = PBXGroup;
+			children = (
+				0F2006D72581BF5B00D9E4BE /* TVShow.swift */,
+				0F2006EA2585848400D9E4BE /* TVShow+US.swift */,
+			);
+			path = TVShow;
+			sourceTree = "<group>";
+		};
+		0F2006DF2581BFB400D9E4BE /* Explicit */ = {
+			isa = PBXGroup;
+			children = (
+				0F2006E02581BFD900D9E4BE /* Explicit.swift */,
+			);
+			path = Explicit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +248,10 @@
 				0F2006622580683100D9E4BE /* Country.swift in Sources */,
 				0F20065C258066E100D9E4BE /* Movie+US.swift in Sources */,
 				0F200652258052A400D9E4BE /* Movie.swift in Sources */,
+				0F2006D82581BF5B00D9E4BE /* TVShow.swift in Sources */,
 				0F20066F25806CBC00D9E4BE /* ContentRestrictionsKit.swift in Sources */,
+				0F2006E12581BFD900D9E4BE /* Explicit.swift in Sources */,
+				0F2006EB2585848400D9E4BE /* TVShow+US.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +401,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -378,7 +414,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kumpeapps.ios.ContentRestrictionsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -393,7 +429,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -406,7 +442,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kumpeapps.ios.ContentRestrictionsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

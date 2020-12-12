@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Deprecated
+// MARK: Deprecated Functions
 /// Gets Device's movie restriction setting as raw value
 @available(iOS, deprecated: 14.0, renamed: "Movie.getDeviceRestrictionValue()")
 public func getDeviceMovieRestrictionRaw() -> Int {
