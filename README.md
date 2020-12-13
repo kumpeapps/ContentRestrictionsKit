@@ -21,7 +21,7 @@ Returns Raw value of Movie Rating Restriction on Device (Int value 0-1000)
 ```swift
 ContentRestrictionsKit.Movie.getDeviceRestriction(country: .US)
 ```
-Returns value of Movie Rating Restriction on Device (String value unrestricted, nc17, r, pg13, pg, g, disallow)
+Returns Name value of Movie Rating Restriction on Device
 
 #### Get Movie Rating Value
 
@@ -37,6 +37,78 @@ ContentRestrictionsKit.Movie.ratingIsAllowed(country: .US, rating: "r") // retur
 ```
 Returns true/false if supplied rating is allowed by device's movie restriction rating
 
+### TV Show Ratings
+
+#### Get Device's TV Show Rating Restrictions Setting
+
+```swift
+ContentRestrictionsKit.TVShow.getDeviceRestrictionValue()
+```
+Returns Raw value of TV Show Rating Restriction on Device (Int value 0-1000)
+
+```swift
+ContentRestrictionsKit.TVShow.getDeviceRestriction(country: .US)
+```
+Returns Name value of TV Show Rating Restriction on Device
+
+#### Get TV Show Rating Value
+
+```swift
+ContentRestrictionsKit.TVShow.getRatingValue(country: .US, rating: "tvpg") // 400
+```
+Returns raw value of supplied TV Show Rating (Int value 0-1000)
+
+#### TV Show Rating is Allowed
+
+```swift
+ContentRestrictionsKit.TVShow.ratingIsAllowed(country: .US, rating: "tvpg") // returns Bool
+```
+Returns true/false if supplied rating is allowed by device's TV Show restriction rating
+
+### App Ratings
+
+#### Get Device's App Rating Restrictions Setting
+
+```swift
+ContentRestrictionsKit.App.getDeviceRestrictionValue()
+```
+Returns Raw value of App Rating Restriction on Device (Int value 0-1000)
+
+```swift
+ContentRestrictionsKit.App.getDeviceRestriction()
+```
+Returns Name value of App Rating Restriction on Device
+
+#### Get App Rating Value
+
+```swift
+ContentRestrictionsKit.App.getRatingValue(rating: "12+") // 300
+```
+Returns raw value of supplied App Rating (Int value 0-1000)
+
+#### App Rating is Allowed
+
+```swift
+ContentRestrictionsKit.App.ratingIsAllowed(rating: "12+") // returns Bool
+```
+Returns true/false if supplied rating is allowed by device's App restriction rating
+
+### Explicit Restrictions
+
+#### Explicit Music Allowed
+
+```swift
+ContentRestrictionsKit.Explicit.isExplicitMusicAllowed() // returns Bool
+```
+Returns true/false if Explicit Music, Podcasts, & News are allowed on the device
+
+#### Explicit Books Allowed
+
+```swift
+ContentRestrictionsKit.Explicit.isExplicitBooksAllowed() // returns Bool
+```
+Returns true/false if Explicit Books are allowed on the device
+
 ## Installation
 
 **ContentRestrictionsKit** is available through [CocoaPods](http://cocoapods.org). To install
@@ -48,12 +120,13 @@ pod 'ContentRestrictionsKit'
 
 ## Features Planned
 
--   [ ] TV Show Ratings
--   [ ] App Ratings
--   [ ] Explicit Books Allowed
--   [ ] Explicit Music Podcasts Allowed
+-   [X] TV Show Ratings
+-   [X] App Ratings
+-   [X] Explicit Books Allowed
+-   [X] Explicit Music Podcasts Allowed
+-   [ ] Game Ratings (Mapped to closest App Rating)
 
 ## Currently Supported Countries 
-(feel free to send me info on new countries or contribute via pull request)
+(feel free to send me info on new countries, request new countries via issue or contribute via pull request. Gathering info for specific countries is very time consuming so additional countries will only be added upon request.)
 
 -   [X] United States (US)

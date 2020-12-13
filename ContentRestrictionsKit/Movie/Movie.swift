@@ -9,7 +9,7 @@ import Foundation
 
 public class Movie {
 
-    // MARK: getDeviceRestrctionValue
+    // MARK: getDeviceRestrictionValue
     /// Gets Device's movie restriction setting as raw value
     public class func getDeviceRestrictionValue() -> Int {
         let movieRestrictionSetting = UserDefaults.standard.object(forKey: "com.apple.content-rating.MovieRating") as? Int ?? 1000

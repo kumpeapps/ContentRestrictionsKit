@@ -9,7 +9,7 @@ import Foundation
 
 public class TVShow {
 
-    // MARK: getDeviceRestrctionValue
+    // MARK: getDeviceRestrictionValue
     /// Gets Device's tv show restriction setting as raw value
     public class func getDeviceRestrictionValue() -> Int {
         let movieRestrictionSetting = UserDefaults.standard.object(forKey: "com.apple.content-rating.TVShowRating") as? Int ?? 1000

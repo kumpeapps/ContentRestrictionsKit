@@ -11,7 +11,7 @@ extension Movie {
     public class US {
         /// Gets Device's movie restriction setting as name (US)
         public class func getDeviceRestrictionName() -> String {
-            let movieRestrictionSetting = UserDefaults.standard.object(forKey: "com.apple.content-rating.MovieRating") as? Int ?? 1000
+            let movieRestrictionSetting = Movie.getDeviceRestrictionValue()
             switch movieRestrictionSetting {
             case 1000:
                 return "unrestricted"

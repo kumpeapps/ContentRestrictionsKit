@@ -15,6 +15,8 @@ class Tests: XCTestCase {
         UserDefaults.standard.set(400, forKey: "com.apple.content-rating.MovieRating")
         // Set simulator TV Show rating to 400 (TV-PG)
         UserDefaults.standard.set(400, forKey: "com.apple.content-rating.TVShowRating")
+        // Set simulator TV Show rating to 300 (12+)
+        UserDefaults.standard.set(300, forKey: "com.apple.content-rating.AppRating")
         // Set simulator Explicit Books Allowed to 0 (False)
         UserDefaults.standard.set(0, forKey: "com.apple.content-rating.ExplicitBooksAllowed")
         // Set simulator Explicit Music Podcasts Allowed to 0 (False)
@@ -78,6 +80,34 @@ class Tests: XCTestCase {
         XCTAssertEqual(ContentRestrictionsKit.TVShow.ratingIsAllowed(country: .US, rating: "TV-PG"), true)
         XCTAssertEqual(ContentRestrictionsKit.TVShow.ratingIsAllowed(country: .US, rating: "tv14"), false)
         XCTAssertEqual(ContentRestrictionsKit.TVShow.ratingIsAllowed(country: .US, rating: "tvma"), false)
+    }
+    
+    func testGetDeviceAppRestrictionValue() {
+        XCTAssertEqual(ContentRestrictionsKit.App.getDeviceRestrictionValue(), 300)
+    }
+
+    func testGetDeviceAppRestriction() {
+        XCTAssertEqual(ContentRestrictionsKit.App.getDeviceRestrictionName(), "12+")
+        XCTAssertNotEqual(ContentRestrictionsKit.App.getDeviceRestrictionName(), "17+")
+    }
+
+    func testGetAppRatingValue() {
+        XCTAssertEqual(ContentRestrictionsKit.App.getRatingValue(rating: "12+"), 300)
+        XCTAssertEqual(ContentRestrictionsKit.App.getRatingValue(rating: "12"), 300)
+        XCTAssertEqual(ContentRestrictionsKit.App.getRatingValue(rating: "17+"), 600)
+        XCTAssertEqual(ContentRestrictionsKit.App.getRatingValue(rating: "4+"), 100)
+        XCTAssertNotEqual(ContentRestrictionsKit.App.getRatingValue(rating: "17+"), 100)
+        XCTAssertNotEqual(ContentRestrictionsKit.App.getRatingValue(rating: "9+"), 400)
+        XCTAssertNotEqual(ContentRestrictionsKit.App.getRatingValue(rating: "4+"), 200)
+    }
+
+    func testAppRatingIsAllowed() {
+        XCTAssertEqual(ContentRestrictionsKit.App.ratingIsAllowed(rating: "12"), true)
+        XCTAssertEqual(ContentRestrictionsKit.App.ratingIsAllowed(rating: "12+"), true)
+        XCTAssertEqual(ContentRestrictionsKit.App.ratingIsAllowed(rating: "9+"), true)
+        XCTAssertEqual(ContentRestrictionsKit.App.ratingIsAllowed(rating: "4+"), true)
+        XCTAssertEqual(ContentRestrictionsKit.App.ratingIsAllowed(rating: "17+"), false)
+        XCTAssertEqual(ContentRestrictionsKit.App.ratingIsAllowed(rating: "17"), false)
     }
 
     func testExplicitMusicAllowed() {

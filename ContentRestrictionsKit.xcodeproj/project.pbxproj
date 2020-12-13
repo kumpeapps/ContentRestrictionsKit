@@ -16,6 +16,7 @@
 		0F2006D82581BF5B00D9E4BE /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006D72581BF5B00D9E4BE /* TVShow.swift */; };
 		0F2006E12581BFD900D9E4BE /* Explicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006E02581BFD900D9E4BE /* Explicit.swift */; };
 		0F2006EB2585848400D9E4BE /* TVShow+US.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006EA2585848400D9E4BE /* TVShow+US.swift */; };
+		0F2006F22585B21E00D9E4BE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2006F12585B21E00D9E4BE /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		0F2006D72581BF5B00D9E4BE /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		0F2006E02581BFD900D9E4BE /* Explicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explicit.swift; sourceTree = "<group>"; };
 		0F2006EA2585848400D9E4BE /* TVShow+US.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShow+US.swift"; sourceTree = "<group>"; };
+		0F2006F12585B21E00D9E4BE /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		0F200633258051E400D9E4BE /* ContentRestrictionsKit */ = {
 			isa = PBXGroup;
 			children = (
+				0F2006F02585B1D500D9E4BE /* App */,
 				0F2006DF2581BFB400D9E4BE /* Explicit */,
 				0F2006D62581BF4E00D9E4BE /* TVShow */,
 				0F2006D52581BEE700D9E4BE /* Movie */,
@@ -134,6 +137,14 @@
 				0F2006E02581BFD900D9E4BE /* Explicit.swift */,
 			);
 			path = Explicit;
+			sourceTree = "<group>";
+		};
+		0F2006F02585B1D500D9E4BE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F2006F12585B21E00D9E4BE /* App.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 				0F200652258052A400D9E4BE /* Movie.swift in Sources */,
 				0F2006D82581BF5B00D9E4BE /* TVShow.swift in Sources */,
 				0F20066F25806CBC00D9E4BE /* ContentRestrictionsKit.swift in Sources */,
+				0F2006F22585B21E00D9E4BE /* App.swift in Sources */,
 				0F2006E12581BFD900D9E4BE /* Explicit.swift in Sources */,
 				0F2006EB2585848400D9E4BE /* TVShow+US.swift in Sources */,
 			);
