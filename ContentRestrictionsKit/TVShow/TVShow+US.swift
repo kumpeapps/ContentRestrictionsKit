@@ -1,30 +1,32 @@
 //
-//  Movie+US.swift
+//  TVShow+US.swift
 //  ContentRestrictionsKit
 //
-//  Created by Justin Kumpe on 12/8/20.
+//  Created by Justin Kumpe on 12/12/20.
 //
 
 import Foundation
 
-extension Movie {
+extension TVShow {
     public class US {
-        /// Gets Device's movie restriction setting as name (US)
+        /// Gets Device's TV Show restriction setting as name (US)
         public class func getDeviceRestrictionName() -> String {
-            let movieRestrictionSetting = UserDefaults.standard.object(forKey: "com.apple.content-rating.MovieRating") as? Int ?? 1000
-            switch movieRestrictionSetting {
+            let tvShowRestrictionSetting = getDeviceRestrictionValue()
+            switch tvShowRestrictionSetting {
             case 1000:
                 return "unrestricted"
+            case 600:
+                return "tvma"
             case 500:
-                return "nc17"
+                return "tv14"
             case 400:
-                return "r"
+                return "tvpg"
             case 300:
-                return "pg13"
+                return "tvg"
             case 200:
-                return "pg"
+                return "tvy7"
             case 100:
-                return "g"
+                return "tvy"
             case 0:
                 return "disallow"
             default:
@@ -32,21 +34,23 @@ extension Movie {
             }
         }
 
-        /// Get iOS raw value of movie rating (US)
+        /// Get iOS raw value of TV Show rating (US)
         public class func getRatingValue(rating: String) -> Int {
-            let movieRating = rating.lowercased()
-            let cleanedMovieRating = movieRating.replacingOccurrences(of: "-", with: "")
-            switch cleanedMovieRating {
-            case "g":
+            let tvShowRating = rating.lowercased()
+            let cleanedTvShowRating = tvShowRating.replacingOccurrences(of: "-", with: "")
+            switch cleanedTvShowRating {
+            case "tvy":
                 return 100
-            case "pg":
+            case "tvy7":
                 return 200
-            case "pg13":
+            case "tvg":
                 return 300
-            case "r":
+            case "tvpg":
                 return 400
-            case "nc17":
+            case "tv14":
                 return 500
+            case "tvma":
+                return 600
             default:
                 return 1000
             }
@@ -55,7 +59,7 @@ extension Movie {
         /// True if supplied rating is allowed per device settings
         public class func ratingIsAllowed(rating: String) -> Bool {
             let ratingRawValue = getRatingValue(rating: rating)
-            let allowedRatingRawValue = Movie.getDeviceRestrictionValue()
+            let allowedRatingRawValue = TVShow.getDeviceRestrictionValue()
             return allowedRatingRawValue >= ratingRawValue
         }
 
