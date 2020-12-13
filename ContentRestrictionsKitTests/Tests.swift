@@ -81,7 +81,7 @@ class Tests: XCTestCase {
         XCTAssertEqual(ContentRestrictionsKit.TVShow.ratingIsAllowed(country: .US, rating: "tv14"), false)
         XCTAssertEqual(ContentRestrictionsKit.TVShow.ratingIsAllowed(country: .US, rating: "tvma"), false)
     }
-    
+
     func testGetDeviceAppRestrictionValue() {
         XCTAssertEqual(ContentRestrictionsKit.App.getDeviceRestrictionValue(), 300)
     }

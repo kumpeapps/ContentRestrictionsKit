@@ -15,7 +15,7 @@ public class App {
         let movieRestrictionSetting = UserDefaults.standard.object(forKey: "com.apple.content-rating.AppRating") as? Int ?? 1000
         return movieRestrictionSetting
     }
-    
+
     // MARK: getDeviceRestrictionName
     /// Gets Device's app restriction setting as name using supplied country's rating system
     public class func getDeviceRestrictionName() -> String {
