@@ -3,6 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/efa8e1aa551f480fa451f59c12b8a279)](https://app.codacy.com/gh/kumpeapps/ContentRestrictionsKit?utm_source=github.com&utm_medium=referral&utm_content=kumpeapps/ContentRestrictionsKit&utm_campaign=Badge_Grade_Settings)
 [![Version](https://img.shields.io/cocoapods/v/ContentRestrictionsKit.svg?style=flat)](https://cocoapods.org/pods/ContentRestrictionsKit)
 [![Platform](https://img.shields.io/cocoapods/p/ContentRestrictionsKit.svg?style=flat)](https://cocoapods.org/pods/ContentRestrictionsKit)
+[![CodeFactor](https://www.codefactor.io/repository/github/kumpeapps/contentrestrictionskit/badge)](https://www.codefactor.io/repository/github/kumpeapps/contentrestrictionskit)
 
 ## Features
 -   Get Device's Movie Rating Restriction Setting (Raw Value or Text Value)
